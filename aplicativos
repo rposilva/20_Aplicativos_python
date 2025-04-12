@@ -1,0 +1,111 @@
+Aqui está a lista de 20 aplicativos para você praticar com Python puro, organizada em três níveis de dificuldade:
+
+Aplicativos Fáceis:
+``
+1 - Organizador de Fila de Atendimento
+    Simulação de Fila
+        Implementação de uma simulação básica de fila de atendimento.
+    Geração de Números Aleatórios
+        Algoritmo para gerar úmeros aleatórios que simulem a chegada de clientes ou tempos de atendimento.
+    Estatísticas de simulação
+        Cálculo do tempo médio de espera, tempo médio do sistema e taxa de ocupação do servidor.
+``
+2 - Gerenciador de Orçamento Pessoal
+    Cálculo de Despesa Recorrentes
+        Algoritmo para registrar e cálcular despesas mensais fixas (como aluguel, contas de consumo, e etc.).
+    Previsão de Gastos
+        Utilizar médias de gastos passados para prever gastos futuros em direntes categorias.
+    Análise de Economia
+        Algoritmo que calcula quanto dinheiro pode ser economizado ao final do mês após todas as despesas, seguindo dicas de economia baeadas nos hábitos de consumo.
+``
+3 - Planejador de Eventos Familiares
+    Sugestão de Datas 
+        Calcular Datas ideais para eventos baseando-se na disponibilidade informada pelos participantes.
+    Organizador de tarefas
+        Distribuir tarefas entre os participantes do eventoassegurando que todos os preparativos sejam cobertos.
+    Lembrete de eventos
+        Enviar notificações automáticas para os participantes conforme a data do evento se aproxima com atualizações de tarefas pendentes.
+``
+Calculadora Simples
+Descrição: Permite ao usuário realizar operações básicas (soma, subtração, multiplicação, divisão).
+Tempo estimado: 30 minutos.
+``
+Conversor de Temperatura
+Descrição: Converte temperaturas entre Celsius, Fahrenheit e Kelvin.
+Tempo estimado: 45 minutos.
+
+Jogo da Adivinhação
+Descrição: Gera um número aleatório e o usuário tenta adivinhar, com dicas de maior/menor.
+Tempo estimado: 1 hora.
+
+Contador de Vogais
+Descrição: Recebe uma string e conta o número de vogais.
+Tempo estimado: 30 minutos.
+
+Gerador de Senhas
+Descrição: Cria senhas aleatórias de tamanho especificado.
+Tempo estimado: 1 hora.
+
+Conversor de Moeda
+Descrição: Converte um valor de uma moeda para outra com uma taxa fixa.
+Tempo estimado: 45 minutos.
+
+Tabela de Tabuada
+Descrição: Gera a tabuada de um número especificado.
+Tempo estimado: 30 minutos.
+
+Cronômetro Simples
+Descrição: Conta o tempo em segundos e exibe o tempo decorrido.
+Tempo estimado: 1 hora.
+
+Validador de CPF
+Descrição: Valida se um CPF digitado é correto (estrutura básica, sem cálculos).
+Tempo estimado: 1 hora.
+
+Jogo de Par ou Ímpar
+Descrição: O usuário escolhe par ou ímpar, o programa gera um número e informa o resultado.
+Tempo estimado: 1 hora.
+
+Aplicativos Médios
+Jogo da Forca
+Descrição: O jogador tenta adivinhar uma palavra, com número limitado de tentativas.
+Tempo estimado: 2 horas.
+
+Simulador de Dados
+Descrição: Gera resultados aleatórios para um dado de 6 ou mais faces.
+Tempo estimado: 1 hora e 30 minutos.
+
+Gestor de Contatos
+Descrição: Permite adicionar, visualizar, atualizar e excluir contatos em um arquivo de texto.
+Tempo estimado: 3 horas.
+
+Analisador de Texto
+Descrição: Recebe um texto e exibe o número de palavras, frases e letras.
+Tempo estimado: 2 horas.
+
+Gerador de Números Primos
+Descrição: Gera os números primos até um valor especificado.
+Tempo estimado: 2 horas.
+
+Sistema de Notas Escolares
+Descrição: Recebe notas de alunos, calcula a média e exibe a situação (aprovado/reprovado).
+Tempo estimado: 2 horas.
+
+Aplicativos Difíceis
+Agenda com Persistência
+Descrição: Cria um sistema de agenda que salva compromissos em um arquivo e os recupera ao reiniciar o programa.
+Tempo estimado: 4 horas.
+
+Jogo da Vida de Conway
+Descrição: Implementa o famoso jogo de simulação baseado em células.
+Tempo estimado: 6 horas.
+
+Gerenciador de Tarefas
+Descrição: Permite criar, editar e excluir tarefas, com priorização e datas de vencimento.
+Tempo estimado: 5 horas.
+
+Sistema Bancário Simples
+Descrição: Simula operações bancárias como depósito, saque, transferência e consulta de saldo, com autenticação simples.
+Tempo estimado: 6 horas.
+
+Esses projetos ajudam a solidificar conceitos como manipulação de arquivos, funções, estruturas de controle, listas, e também proporcionam desafios crescentes.
