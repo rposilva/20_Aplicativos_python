@@ -5,3 +5,4 @@
         # Utilizar médias de gastos passados para prever gastos futuros em direntes categorias.
     # Análise de Economia
         # Algoritmo que calcula quanto dinheiro pode ser economizado ao final do mês após todas as despesas, seguindo dicas de economia baeadas nos hábitos de consumo.
+        
