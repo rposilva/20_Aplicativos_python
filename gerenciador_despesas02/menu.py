@@ -1,13 +1,16 @@
-# Menu: Despesas
-#   1. Adicionar Despesa
-#   2. Listar Despesas
-#   3. Editar Despesa
-#   4. Remover Despesa
-#   5. Calcular Despesas Totais
-#   6. Previsão de Gastos
-#   7. Análise de Economia
-#   8. Sair
 from despesas import Despesas
+import json
+import os
+
+def carregar_despesas():
+    if os.path.exists("despesas.py"):
+        with open("despesas.json", "r") as arquivo:
+            return json.load(arquivo)
+    return []
+
+def salvar_despesas(despesas):
+    with open("despesas.json", "w") as arquivo:
+        json.dump(despesas, arquivo, indent=4, ensure_ascii=False)
 
 def exibir_menu():
     print("\n=== Menu de Despesas ===")
@@ -21,6 +24,7 @@ def exibir_menu():
 
 def main():
     sistema = Despesas()
+    sistema.despesas = carregar_despesas()
 
     while True:
         exibir_menu()
@@ -44,6 +48,7 @@ def main():
             recorrente = recorrente_input == "s"
 
             sistema.adicionar_despesa(descricao, valor, categoria, recorrente)
+            salvar_despesas(sistema.despesas)
             print(f'Despesa "{descricao}" adicionada com sucesso!')
 
         elif opcao == "2":
@@ -73,7 +78,8 @@ def main():
                 continue
 
         elif opcao == "0":
-            print("Saindo...")
+            salvar_despesas(sistema.despesas)
+            print("Saindo... Despesas salvas.")
             break
 
         else:
