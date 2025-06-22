@@ -3,9 +3,13 @@ import json
 import os
 
 def carregar_despesas():
-    if os.path.exists("despesas.py"):
-        with open("despesas.json", "r") as arquivo:
-            return json.load(arquivo)
+    if os.path.exists("despesas.json"):
+        try:
+            with open("despesas.json", "r") as arquivo:
+                return json.load(arquivo)
+        except (IOError, json.JSONDecodeError) as e:
+            print(f"Erro ao carregar despesas: {str(e)}")
+            return []
     return []
 
 def salvar_despesas(despesas):
@@ -37,10 +41,22 @@ def main():
                 continue
             try:
                 valor = float(input("Valor: "))
+                if valor <= 0:
+                    print("❌ O valor deve ser maior que zero.")
+                    continue
+                if valor > 1_000_000:
+                    print("❌ O valor não pode ultrapassar R$ 1.000.000,00.")
+                    continue
             except ValueError:
                 print("❌ Valor inválido! Digite um número.")
                 continue
-            categoria = input("Categoria: ")
+            while True:
+                categoria = input("Categoria: ").strip()
+                if categoria:
+                    break
+                else:
+                    print("❌ A categoria não pode ficar vazia.")
+
             recorrente_input = input("É recorrente? (s/n): ").strip().lower()
             if recorrente_input not in ["s", "n"]:
                 print("❌ Resposta inválida! Use 's' para sim ou 'n' para não.")

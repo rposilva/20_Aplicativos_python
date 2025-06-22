@@ -1,0 +1,8 @@
+[
+    {
+        "descricao": "Luz",
+        "valor": 100.0,
+        "categoria": "Casa",
+        "recorrente": true
+    }
+]
