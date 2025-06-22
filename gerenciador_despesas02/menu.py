@@ -27,10 +27,21 @@ def main():
         opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
-            descricao = input("Descrição: ")
-            valor = float(input("Valor: "))
+            descricao = input("Descrição: ").strip()
+            if not descricao:
+                print("❌ A descrição não pode estar vazia!")
+                continue
+            try:
+                valor = float(input("Valor: "))
+            except ValueError:
+                print("❌ Valor inválido! Digite um número.")
+                continue
             categoria = input("Categoria: ")
-            recorrente = input("É recorrente? (s/n): ").strip().lower() == 's'
+            recorrente_input = input("É recorrente? (s/n): ").strip().lower()
+            if recorrente_input not in ["s", "n"]:
+                print("❌ Resposta inválida! Use 's' para sim ou 'n' para não.")
+                continue
+            recorrente = recorrente_input == "s"
 
             sistema.adicionar_despesa(descricao, valor, categoria, recorrente)
             print(f'Despesa "{descricao}" adicionada com sucesso!')
@@ -39,7 +50,10 @@ def main():
             sistema.listar_despesas()
 
         elif opcao == "3":
-            sistema.calcular_total_despesas()
+            try:
+                sistema.calcular_total_despesas()
+            except Exception as e:
+                print(f"❌ Erro ao calcular total de despesas: {str(e)}")
 
         elif opcao == "4":
             sistema.calcular_despesas_por_categoria()
@@ -48,8 +62,15 @@ def main():
             sistema.calcular_despesas_recorrentes()
 
         elif opcao == "6":
-            meses = int(input("Para quantos meses? "))
-            sistema.previsao_gastos(meses)
+            try:
+                meses = int(input("Para quantos meses? "))
+                if meses <= 0:
+                    print("❌ O número de meses deve ser positivo!")
+                    continue
+                sistema.previsao_gastos(meses)
+            except ValueError:
+                print("❌ Por favor, digite um número válido!")
+                continue
 
         elif opcao == "0":
             print("Saindo...")
